@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="site-header-logo">
+        <h1 class="text-center">
+            Project data analysis and reference prediction
+        </h1>
+    </div>
+
+    <img src="static\icon2.jpg" style="padding-left: 300px;">
+
+    <div class="row p-4">
+        <div class="card mb-4 m-auto" style="width: 93%;">
+            <div class="card-body">
+                <div id="chart1"></div>
+                <h3>Introduction</h3>
+                <p class="card-text">Our project deals with analyzing the previous years major project data of Computer Department of I2IT. It will suggest the experienced mentor in specific domain. This project will help students to choose mentor accordingly.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 m-auto" style="width: 90%;">
+            <div class="card-body">
+                <div id="chart2"></div>
+                <h3>Motivation</h3>
+                <p class="card-text">For completing a project successfully we all need the best guidance so that we will get right direction to complete the project.
+                    From our projects, one will get various ideas about projects, its domain, and number of papers published in that particular domain.
+                    As it is always a difficult task for juniors to select appropriate domain for a project to get successfully completed, our project will assist them.
+                    </p>
+            </div>
+        </div>
+
+      
+
+        <div class="card mb-4 m-auto" style="width: 90%;">
+            <div class="card-body">
+                <div id="chart3"></div>
+                <h3>Objective</h3>
+                <p class="card-text">To extract the list of project titles and expertise mentor in specific domain
+                    To visualise most frequently chosen domain, faculty
+                    To get the abstract of previous years projects
+                    To analyse research paper submission statistics
+                    </p>
+            </div>
+            </div>
+
+        <div class="card mb-4 m-auto" style="width: 90%;">
+            <div class="card-body">
+                
+                <div id="chart4"></div>
+                <h3> Dataset Information</h3>
+                <p class="card-text">The dataset is taken from International Institute of Information Technology, Computer branch. It is a Categorical data with no duplicate entries. It contains 6 columns and 42 rows.</p>
+            </div>
+            </div>    
+   
+                       
+                     
+                            </div> 
+      
+      
+        </div>
+    </div>
+    <!-- plotly CDN -->
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+
+        var graphs1 = {{ graph1JSON | safe}};
+        Plotly.plot("chart1", graphs1,{});
+
+        var graphs2 = {{ graph2JSON | safe}};
+        Plotly.plot("chart2", graphs2,{});
+
+       
+        var graphs3 = {{ graph3JSON | safe}};
+        Plotly.plot("chart3", graphs3,{});
+
+
+        var graphs4 = {{ graph4JSON | safe}};
+        Plotly.plot("chart4", graphs4,{});
+
+        var graphs5 = {{ graph5JSON | safe}};
+        Plotly.plot("chart5", graphs5,{}); 
+        
+        
+        var graphs6 = {{ graph6JSON | safe}};
+        Plotly.plot("chart6", graphs6,{}); 
+        
+        
+        var graphs7 = {{ graph7JSON | safe}};
+        Plotly.plot("chart7", graphs7,{}); 
+
+        
+        var graphs8 = {{ graph8JSON | safe}};
+        Plotly.plot("chart8", graphs8,{}); 
+
+
+        
+        var graphs9 = {{ graph9JSON | safe}};
+        Plotly.plot("chart9", graphs9,{}); 
+        </script>
+
+{% endblock %}
+
+
+
+
+
